@@ -93,7 +93,8 @@
     "prepack": "node tools/scripts/distribution_snapshot.cjs verify",
     "distribution:verify": "node tools/scripts/distribution_snapshot.cjs verify",
     "maintenance:measure": "node tools/scripts/maintenance_measure.cjs",
-    "maintenance:cycle": "node tools/scripts/maintenance_cycle.cjs"
+    "maintenance:cycle": "node tools/scripts/maintenance_cycle.cjs",
+    "app:ci:pilot": "node tools/scripts/web_ci_pilot.cjs"
   },
   "dependencies": {
     "ajv": "^8.20.0",
@@ -143,5 +144,9 @@
     "antigravity",
     "agentic-skills",
     "ai-coding"
-  ]
+  ],
+  "devDependencies": {
+    "turbo": "2.11.7"
+  },
+  "packageManager": "npm@11.20.0"
 }

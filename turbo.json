@@ -1,0 +1,59 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "app:test": {
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!apps/web-app/public/sitemap.xml",
+        "!apps/web-app/public/skills.json.backup",
+        "apps/web-app/.env*"
+      ],
+      "env": [
+        "AAS_PILOT_NODE_VERSION",
+        "AAS_PILOT_PLATFORM",
+        "AAS_PILOT_COMMIT",
+        "VITE_*",
+        "SEO_SITE_URL",
+        "WEBSITE_BASE_URL",
+        "TOP_SKILL_COUNT",
+        "PRERENDER_*",
+        "AAS_SOURCE_COMMIT",
+        "VERCEL_GIT_COMMIT_SHA",
+        "NODE_ENV",
+        "CI",
+        "TZ",
+        "LANG"
+      ],
+      "outputs": []
+    },
+    "app:build": {
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!apps/web-app/public/sitemap.xml",
+        "!apps/web-app/public/skills.json.backup",
+        "apps/web-app/.env*"
+      ],
+      "env": [
+        "AAS_PILOT_NODE_VERSION",
+        "AAS_PILOT_PLATFORM",
+        "AAS_PILOT_COMMIT",
+        "VITE_*",
+        "SEO_SITE_URL",
+        "WEBSITE_BASE_URL",
+        "TOP_SKILL_COUNT",
+        "PRERENDER_*",
+        "AAS_SOURCE_COMMIT",
+        "VERCEL_GIT_COMMIT_SHA",
+        "NODE_ENV",
+        "CI",
+        "TZ",
+        "LANG"
+      ],
+      "outputs": [
+        "apps/web-app/dist/**",
+        "apps/web-app/public/sitemap.xml",
+        "apps/web-app/public/skills.json.backup"
+      ]
+    }
+  }
+}
